@@ -42,7 +42,7 @@ answers = st.text_area("Answer each Question in seperate paragraphs.")
 
 
 if st.button("Submit Answers"):
-    if len(ans) == len(questions):
+    if len(answers)>10:
         with st.spinner("Please Wait Predicting your Personality"):
             X=vectorizer.transform([" ".join(answers)]).toarray()
             decoder = ['ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP','INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP', 'ISTJ', 'ISTP']
@@ -52,4 +52,4 @@ if st.button("Submit Answers"):
         st.success("Your Personality is "+str(personality))
         st.write("Introversion(I) – Extroversion (E) Intuition (N) – Sensing (S) Thinking (T) – Feeling (F) Judging (J) – Perceiving (P).")
     else:
-        st.error("Please Enter All Fields")
+        st.error("Please Enter Answers")
