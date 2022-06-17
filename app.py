@@ -42,7 +42,6 @@ answers = st.text_area("Answer each Question in seperate paragraphs.")
 
 
 if st.button("Submit Answers"):
-    print(ans)
     if len(ans) == len(questions):
         with st.spinner("Please Wait Predicting your Personality"):
             X=vectorizer.transform([" ".join(answers)]).toarray()
