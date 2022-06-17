@@ -1,0 +1,9 @@
+nltk==3.7
+numpy==1.22.3
+pickleshare==0.7.5
+scikit-learn==1.1.0
+sklearn==0.0
+statsmodels==0.13.2
+streamlit==1.9.0
+streamlit-bokeh-events==0.1.2
+
